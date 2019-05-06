@@ -37,6 +37,7 @@ export default {
         { title: 'Setup', icon: 'ballot' },
         { title: 'Glossary', icon: 'book' },
         { title: 'Profiles', icon: 'face' },
+        { title: 'Shop', icon: 'shopping_cart' },
         { title: 'About', icon: 'supervised_user_circle' }
       ],
       right: null
