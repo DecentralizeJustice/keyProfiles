@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <v-app dark class="all">
-      <v-content>
+    <v-app dark >
+      <v-content class="all">
         <router-view/>
     </v-content>
   </v-app>
@@ -11,5 +11,11 @@
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700');
 .all{
   font-family: 'Karla', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://res.cloudinary.com/dylevfpbl/image/upload/v1557131879/keyapp/black-and-white.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
