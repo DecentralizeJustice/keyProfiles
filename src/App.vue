@@ -2,6 +2,7 @@
   <div id="app">
     <v-app dark >
       <v-content class="all">
+        <sideBar/>
         <router-view/>
     </v-content>
   </v-app>
@@ -19,3 +20,13 @@
   background-size: cover;
 }
 </style>
+<script>
+import sideBar from '@/components/mainsidebar.vue'
+export default {
+  components: {
+    sideBar
+  },
+  data () {
+  }
+}
+</script>

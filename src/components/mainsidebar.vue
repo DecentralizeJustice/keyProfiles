@@ -31,12 +31,13 @@
 </template>
 <script>
 export default {
+  name: 'sideBar',
   data () {
     return {
       items: [
-        { title: 'Setup', icon: 'ballot' },
-        { title: 'Glossary', icon: 'book' },
+        { title: 'Home', icon: 'ballot' },
         { title: 'Profiles', icon: 'face' },
+        { title: 'Glossary', icon: 'book' },
         { title: 'Shop', icon: 'shopping_cart' },
         { title: 'About', icon: 'supervised_user_circle' }
       ],
