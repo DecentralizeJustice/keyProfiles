@@ -16,7 +16,7 @@
       <v-list-tile
         v-for="item in items"
         :key="item.title"
-        @click=""
+        :to="item.link"
       >
         <v-list-tile-action>
           <v-icon>{{ item.icon }}</v-icon>
@@ -28,6 +28,25 @@
       </v-list-tile>
     </v-list>
   </v-navigation-drawer>
+  <!-- <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+    >
+      <v-list class="pt-0" dense>
+        <v-divider></v-divider>
+        <v-list-tile
+          v-for="page in pages"
+          :key="page.title"
+          :to="page.link"
+          class="mt-2"
+        >
+          <v-list-tile-content style="font-size: 2em;">
+            {{page.title}}
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+</v-navigation-drawer> -->
 </template>
 <script>
 export default {
@@ -35,13 +54,11 @@ export default {
   data () {
     return {
       items: [
-        { title: 'Home', icon: 'ballot' },
-        { title: 'Profiles', icon: 'face' },
-        { title: 'Glossary', icon: 'book' },
-        { title: 'Shop', icon: 'shopping_cart' },
-        { title: 'About', icon: 'supervised_user_circle' }
-      ],
-      right: null
+        { title: 'Home', icon: 'ballot', link: '/' },
+        { title: 'Glossary', icon: 'book', link: '/gloss' },
+        { title: 'Shop', icon: 'shopping_cart', link: '/shop' },
+        { title: 'About', icon: 'supervised_user_circle', link: '/about' }
+      ]
     }
   }
 }
