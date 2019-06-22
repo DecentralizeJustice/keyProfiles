@@ -2,7 +2,7 @@
   <div id="app">
     <v-app dark >
       <v-content class="all">
-        <sideBar/>
+        <navBar/>
         <router-view/>
     </v-content>
   </v-app>
@@ -21,10 +21,10 @@
 }
 </style>
 <script>
-import sideBar from '@/components/mainsidebar.vue'
+import navBar from '@/components/mainNavBar.vue'
 export default {
   components: {
-    sideBar
+    navBar
   },
   data () {
   }

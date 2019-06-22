@@ -1,5 +1,30 @@
 <template>
-  <v-navigation-drawer permanent>
+  <div>
+  <v-toolbar class="hidden-sm-and-down">
+  <v-toolbar-side-icon></v-toolbar-side-icon>
+
+  <v-spacer></v-spacer>
+  <v-toolbar-items class="hidden-sm-and-down">
+    <v-btn  v-for="item in items"
+            :key="item.title"
+            :to="item.link" flat>{{ item.title }}
+    </v-btn>
+  </v-toolbar-items>
+</v-toolbar>
+<v-container class="hidden-md-and-up">
+  <v-layout justify-center>
+    <v-btn
+      color="pink"
+      dark
+      @click.stop="drawer = !drawer"
+    >
+      Toggle
+    </v-btn>
+  </v-layout>
+</v-container>
+  <v-navigation-drawer class="hidden-md-and-up"      v-model="drawer"
+      absolute
+      temporary>
     <v-toolbar flat>
       <v-list>
         <v-list-tile>
@@ -28,31 +53,15 @@
       </v-list-tile>
     </v-list>
   </v-navigation-drawer>
-  <!-- <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      temporary
-    >
-      <v-list class="pt-0" dense>
-        <v-divider></v-divider>
-        <v-list-tile
-          v-for="page in pages"
-          :key="page.title"
-          :to="page.link"
-          class="mt-2"
-        >
-          <v-list-tile-content style="font-size: 2em;">
-            {{page.title}}
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-</v-navigation-drawer> -->
+
+</div>
 </template>
 <script>
 export default {
-  name: 'sideBar',
+  name: 'navBar',
   data () {
     return {
+      drawer: true,
       items: [
         { title: 'Home', icon: 'ballot', link: '/' },
         { title: 'Glossary', icon: 'book', link: '/gloss' },
