@@ -14,14 +14,14 @@
   font-family: 'Karla', sans-serif;
   height: 100vh;
   width: 100vw;
-  background-image: url("https://res.cloudinary.com/dylevfpbl/image/upload/v1557131879/keyapp/black-and-white.jpg");
+  background-image: url("https://res.cloudinary.com/dylevfpbl/image/upload/v1561245205/keyapp/4k-wallpaper-astronomy-constellations-1738402.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 </style>
 <script>
-import navBar from '@/components/mainNavBar.vue'
+import navBar from '@/components/nav/mainNavBar.vue'
 export default {
   components: {
     navBar
