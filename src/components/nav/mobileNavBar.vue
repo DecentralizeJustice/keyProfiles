@@ -1,6 +1,6 @@
 <template>
   <div>
-  <v-toolbar class="hidden-md-and-up" fixed app>
+  <v-toolbar class="hidden-md-and-up">
 
       <v-toolbar-title>Keys By Any Means</v-toolbar-title>
 
