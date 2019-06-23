@@ -1,19 +1,18 @@
 <template>
   <div>
   <v-toolbar class="hidden-md-and-up" absolute>
-
-      <v-toolbar-title>Keys By Any Means</v-toolbar-title>
+    <v-toolbar-items >
+      <v-btn
+        dark
+        flat
+        @click.stop="drawer = !drawer"
+      >
+      <v-icon >menu</v-icon>
+      </v-btn>
+    </v-toolbar-items>
 
   <v-spacer></v-spacer>
-  <v-toolbar-items >
-    <v-btn
-      dark
-      flat
-      @click.stop="drawer = !drawer"
-    >
-    <v-icon >menu</v-icon>
-    </v-btn>
-  </v-toolbar-items>
+<v-toolbar-title>Keys By Any Means</v-toolbar-title>
 </v-toolbar>
 
   <v-navigation-drawer class="hidden-md-and-up" v-model="drawer"
