@@ -1,6 +1,6 @@
 <template>
   <div>
-  <v-toolbar class="hidden-md-and-up" scroll-off-screen >
+  <v-toolbar class="hidden-md-and-up" scroll-off-screen app>
 
       <v-toolbar-title>Keys By Any Means</v-toolbar-title>
 
@@ -8,9 +8,10 @@
   <v-toolbar-items >
     <v-btn
       dark
+      flat
       @click.stop="drawer = !drawer"
     >
-    <v-icon>menu</v-icon>
+    <v-icon >menu</v-icon>
     </v-btn>
   </v-toolbar-items>
 </v-toolbar>
