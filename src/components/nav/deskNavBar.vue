@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar class="hidden-sm-and-down">
+  <v-toolbar class="hidden-sm-and-down" app>
 
       <v-toolbar-title>Keys By Any Means</v-toolbar-title>
 
@@ -16,14 +16,9 @@
 <script>
 export default {
   name: 'deskNavBar',
+  props: ['items'],
   data () {
     return {
-      items: [
-        { title: 'Home', icon: 'ballot', link: '/' },
-        { title: 'Glossary', icon: 'book', link: '/gloss' },
-        { title: 'Shop', icon: 'shopping_cart', link: '/shop' },
-        { title: 'About', icon: 'supervised_user_circle', link: '/about' }
-      ]
     }
   }
 }

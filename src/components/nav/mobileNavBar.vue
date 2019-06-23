@@ -1,6 +1,6 @@
 <template>
   <div>
-  <v-toolbar class="hidden-md-and-up">
+  <v-toolbar class="hidden-md-and-up" scroll-off-screen >
 
       <v-toolbar-title>Keys By Any Means</v-toolbar-title>
 
@@ -14,7 +14,8 @@
     </v-btn>
   </v-toolbar-items>
 </v-toolbar>
-  <v-navigation-drawer class="hidden-md-and-up"      v-model="drawer"
+
+  <v-navigation-drawer class="hidden-md-and-up" v-model="drawer"
       absolute
       temporary>
     <v-toolbar flat>
@@ -62,15 +63,10 @@
 <script>
 export default {
   name: 'mobileNavBar',
+  props: ['items'],
   data () {
     return {
-      drawer: true,
-      items: [
-        { title: 'Home', icon: 'ballot', link: '/' },
-        { title: 'Glossary', icon: 'book', link: '/gloss' },
-        { title: 'Shop', icon: 'shopping_cart', link: '/shop' },
-        { title: 'About', icon: 'supervised_user_circle', link: '/about' }
-      ]
+      drawer: null
     }
   }
 }

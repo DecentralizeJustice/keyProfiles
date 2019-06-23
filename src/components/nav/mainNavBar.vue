@@ -1,7 +1,7 @@
 <template>
   <div>
-    <deskNavBar/>
-    <mobileNavBar/>
+    <deskNavBar v-bind:items="items"/>
+    <mobileNavBar v-bind:items="items"/>
   </div>
 </template>
 <script>
@@ -15,6 +15,12 @@ export default {
   name: 'navBar',
   data () {
     return {
+      items: [
+        { title: 'Home', icon: 'ballot', link: '/' },
+        { title: 'Glossary', icon: 'book', link: '/gloss' },
+        { title: 'Shop', icon: 'shopping_cart', link: '/shop' },
+        { title: 'About', icon: 'supervised_user_circle', link: '/about' }
+      ]
     }
   }
 }
