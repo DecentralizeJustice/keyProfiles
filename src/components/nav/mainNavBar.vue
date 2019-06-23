@@ -17,6 +17,7 @@ export default {
     return {
       items: [
         { title: 'Home', icon: 'ballot', link: '/' },
+        { title: 'Profiles', icon: 'face', link: '/profiles' },
         { title: 'Glossary', icon: 'book', link: '/gloss' },
         { title: 'Shop', icon: 'shopping_cart', link: '/shop' },
         { title: 'About', icon: 'supervised_user_circle', link: '/about' }

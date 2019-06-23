@@ -14,7 +14,7 @@
           aspect-ratio="1.75"
         ></v-img>
         <v-card-actions class="justify-center">
-          <v-btn flat large color="orange">Start</v-btn>
+          <v-btn flat large to="/profiles" color="orange">Start</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
