@@ -7,7 +7,6 @@
 // import toolBar from '@/components/toolBar.vue'
 
 export default {
-  name: 'about',
   components: {
   },
   data () {

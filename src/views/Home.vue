@@ -6,7 +6,7 @@
       <v-card>
         <v-card-title primary-title text-xs-center class="justify-center">
           <div>
-            <h3 text-xs-center class="headline">Security Profile</h3>
+            <h3 text-xs-center class="headline">Security Profiles</h3>
           </div>
         </v-card-title>
         <v-img
@@ -41,7 +41,6 @@
 </template>
 <script>
 export default {
-  name: 'main',
   props: [],
   data () {
     return {
