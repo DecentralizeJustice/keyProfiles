@@ -1,6 +1,6 @@
 <template>
     <div>
-        <video ref="videoPlayer" class="video-js vjs-fluid"></video>
+        <video ref="videoPlayer" class="video-js vjs-fluid vjs-big-play-centered"></video>
     </div>
 </template>
 
@@ -10,21 +10,25 @@ import 'video.js/dist/video-js.min.css'
 export default {
   name: 'VideoPlayer',
   props: {
-    options: {
-      type: Object,
-      default () {
-        return {}
-      }
-    }
+    videoLink: String
   },
   data () {
     return {
-      player: null
+      player: null,
+      options: {
+        controls: true,
+        sources: [
+          {
+            src:
+              this.videoLink,
+            type: 'video/mp4'
+          }
+        ]
+      }
     }
   },
   mounted () {
     this.player = videojs(this.$refs.videoPlayer, this.options, function onPlayerReady () {
-      // console.log('onPlayerReady', this)
     })
   },
   beforeDestroy () {

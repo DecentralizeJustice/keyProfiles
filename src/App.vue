@@ -39,6 +39,9 @@ export default {
     navBar
   },
   data () {
+    return {
+
+    }
   },
   computed: {
     // imageHeight () {
