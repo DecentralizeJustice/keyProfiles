@@ -36,7 +36,7 @@
 <script>
 import VideoPlayer from '@/components/VideoPlayer.vue'
 export default {
-  name: 'firstVisit',
+  name: 'landingPage',
   components: { VideoPlayer
   },
   data () {
