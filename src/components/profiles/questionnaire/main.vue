@@ -1,34 +1,20 @@
 <template>
   <v-container  text-xs-center fluid fill-height grid-list-md>
     <v-layout  align-center justify-space-around row wrap>
-
-    <v-flex xs10   md5 >
-      <v-card>
-          <v-card-title primary-title text-xs-center class="justify-center">
-            <div>
-              <h3 text-xs-center class="headline">Budget</h3>
-            </div>
-          </v-card-title>
-          <video-player :videoLink="videoLink"/>
-      </v-card>
-    </v-flex>
-
-    <v-flex xs10   md5 >
-
-    </v-flex>
-
+      <quest1 v-if='currentQuestion === 0'/>
     </v-layout>
   </v-container>
 </template>
 <script>
-import VideoPlayer from '@/components/VideoPlayer.vue'
+import quest1 from '@/components/profiles/questionnaire/questions/quest1.vue'
 export default {
   name: 'questionnairMain',
-  components: { VideoPlayer
+  components: {
+    quest1
   },
   data () {
     return {
-      videoLink: 'https://res.cloudinary.com/dylevfpbl/video/upload/v1551009310/decenMain/yes.mp4'
+      currentQuestion: 0
     }
   }
 }

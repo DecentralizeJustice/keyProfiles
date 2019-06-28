@@ -3,14 +3,7 @@
     <v-layout  align-center justify-space-around row wrap>
 
     <v-flex xs10   md5 >
-      <v-card>
-          <v-card-title primary-title text-xs-center class="justify-center">
-            <div>
-              <h3 text-xs-center class="headline">Introduction</h3>
-            </div>
-          </v-card-title>
-          <video-player :videoLink="videoLink"/>
-      </v-card>
+      <videoCard :videoInfo="videoInfo" />
     </v-flex>
 
     <v-flex xs10   md5 >
@@ -34,14 +27,18 @@
   </v-container>
 </template>
 <script>
-import VideoPlayer from '@/components/VideoPlayer.vue'
+import videoCard from '@/components/videoCard.vue'
 export default {
   name: 'landingPage',
-  components: { VideoPlayer
+  components: {
+    videoCard
   },
   data () {
     return {
-      videoLink: 'https://res.cloudinary.com/dylevfpbl/video/upload/v1551009310/decenMain/yes.mp4'
+      videoInfo: {
+        title: 'Introduction',
+        videoLink: 'https://res.cloudinary.com/dylevfpbl/video/upload/v1551009310/decenMain/yes.mp4'
+      }
     }
   },
   methods: {
