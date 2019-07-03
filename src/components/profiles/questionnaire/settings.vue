@@ -21,7 +21,7 @@
        <v-card-text>
          Content Type:<br>
          <v-btn large v-bind:flat="!contentTypeVideo" color="info"
-         v-on:click="checkForChange(true)">Video</v-btn>
+          v-on:click="checkForChange(true)">Video</v-btn>
          <v-btn large v-bind:flat="contentTypeVideo"
           v-on:click="checkForChange(false)" color="yellow">Text</v-btn>
        </v-card-text>
