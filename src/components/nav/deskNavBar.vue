@@ -1,16 +1,28 @@
 <template>
-  <v-toolbar class="hidden-sm-and-down" app>
 
-      <v-toolbar-title>Keys By Any Means</v-toolbar-title>
 
-  <v-spacer></v-spacer>
-  <v-toolbar-items class="hidden-sm-and-down">
-    <v-btn  v-for="item in items"
-            :key="item.title"
-            :to="item.link" flat>{{ item.title }}
-    </v-btn>
-  </v-toolbar-items>
-</v-toolbar>
+
+    <v-container grid-list-md fluid text-xs-center class="ma-0 pa-0">
+        <v-layout row >
+          <v-flex xs12>
+            <v-stepper value="2">
+    <v-stepper-header>
+      <v-stepper-step step="1" complete>Select campaign settings</v-stepper-step>
+
+      <v-divider></v-divider>
+
+      <v-stepper-step step="2">Create an ad group</v-stepper-step>
+
+      <v-divider></v-divider>
+
+      <v-stepper-step step="3">Create an ad</v-stepper-step>
+    </v-stepper-header>
+  </v-stepper>
+          </v-flex>
+
+        </v-layout>
+      </v-container>
+
 
 </template>
 <script>

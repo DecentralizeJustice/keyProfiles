@@ -3,7 +3,7 @@
     <v-layout  align-center justify-space-around row wrap>
       <component :is="currentQuest"></component>
       <!-- <quest1 v-if='currentQuestion === 0'/> -->
-      <navBar class="mt-4" />
+      <navBar class="mt-4" v-on:goBack="goBack"/>
     </v-layout>
   </v-container>
 </template>
@@ -24,6 +24,14 @@ export default {
   computed: {
     currentQuest () {
       return () => import(`@/components/profiles/questionnaire/questions/quest${this.currentQuestion}.vue`)
+    }
+  },
+  methods: {
+    goBack: function () {
+      if (this.currentQuestion===0) {
+        this.$emit('exit')
+      }else {
+      }
     }
   }
 }

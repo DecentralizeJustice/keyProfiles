@@ -8,9 +8,7 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'setup',
-      component: () => import(/* webpackChunkName: "about" */ './views/Home.vue')
+      path: '/',redirect: '/profiles'
     },
     {
       path: '/about',

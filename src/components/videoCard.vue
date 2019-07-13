@@ -1,10 +1,10 @@
 <template>
   <v-card>
-      <v-card-title primary-title text-xs-center class="justify-center">
+      <!-- <v-card-title primary-title text-xs-center class="justify-center">
         <div>
           <h3 text-xs-center class="headline">{{videoInfo.title}}</h3>
         </div>
-      </v-card-title>
+      </v-card-title> -->
       <video-player :videoLink="videoInfo.videoLink"/>
   </v-card>
 </template>
