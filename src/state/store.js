@@ -7,7 +7,7 @@ Vue.use(Vuex)
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,
-  modules: ['settings']
+  modules: []
 })
 export default new Vuex.Store({
   strict: process.env.NODE_ENV !== 'production',

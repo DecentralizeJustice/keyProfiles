@@ -14,23 +14,11 @@
             <div> {{ card_text }} </div>
           </div>
         </v-card-title>
-        <!-- <v-card-title primary-title text-xs-center class="justify-center">
-          <div>
-            <h3 text-xs-center class="headline">Custom Security Analysis</h3>
-          </div>
-        </v-card-title>
-        <v-img
-          src="https://res.cloudinary.com/dylevfpbl/image/upload/v1561271979/keyapp/welcome.jpg"
-          aspect-ratio="1.75"
-        ></v-img>
-        <v-card-actions class="justify-center">
-          <v-btn flat large v-on:click="startQuestionnaire" color="orange">Start</v-btn>
-        </v-card-actions> -->
       </v-card>
     </v-flex>
     <v-flex xs10   md5 >
       <div>
-        <v-btn color="success">Start Tutorial</v-btn>
+        <v-btn color="success" to="/tutorial">Start Tutorial</v-btn>
       <v-btn color="info">Profile Tool</v-btn>
       </div>
     </v-flex>
@@ -40,7 +28,7 @@
 <script>
 import videoCard from '@/components/videoCard.vue'
 export default {
-  name: 'landingPage',
+  name: 'firstVisit',
   components: {
     videoCard
   },

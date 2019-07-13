@@ -2,31 +2,13 @@
   <div id="app">
     <v-app dark >
     <!-- <navBar app ></navBar> -->
+    <tutorialTopNav v-if="navVisible"/>
       <v-content   v-bind:class="{ desk: $vuetify.breakpoint.mdAndUp,
           mobile: $vuetify.breakpoint.smAndDown }"
         >
         <router-view/>
       </v-content>
-      <!-- <v-bottom-nav
-      :value="true"
-      absolute
-      app
-      :height="70"
-    >
-    <v-stepper value="2">
-<v-stepper-header>
-<v-stepper-step step="1" complete>Select campaign settings</v-stepper-step>
-
-<v-divider></v-divider>
-
-<v-stepper-step step="2">Create an ad group</v-stepper-step>
-
-<v-divider></v-divider>
-
-<v-stepper-step step="3">Create an ad</v-stepper-step>
-</v-stepper-header>
-</v-stepper>
-    </v-bottom-nav> -->
+      <tutorialNav v-if="navVisible"/>
     </v-app>
   </div>
 </template>
@@ -40,11 +22,17 @@
 }
 </style>
 <script>
+import tutorialNav from '@/components/tutorial/bottomNav.vue'
+import tutorialTopNav from '@/components/tutorial/topNav.vue'
+import { createNamespacedHelpers } from 'vuex'
+const { mapState } = createNamespacedHelpers('tutorialnav')
+
 // import navBar from '@/components/nav/mainNavBar.vue'
 export default {
 
   components: {
-    // navBar
+    tutorialNav,
+    tutorialTopNav
   },
   data () {
     return {
@@ -52,6 +40,9 @@ export default {
     }
   },
   computed: {
+    ...mapState([
+      'navVisible'
+    ])
   }
 }
 </script>
