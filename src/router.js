@@ -8,7 +8,7 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',redirect: '/profiles'
+      path: '/', redirect: '/profiles'
     },
     {
       path: '/about',
