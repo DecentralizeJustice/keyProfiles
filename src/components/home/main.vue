@@ -1,20 +1,15 @@
 <template>
   <v-container  text-xs-center fluid fill-height grid-list-md>
     <v-layout  align-center justify-space-around row fill-height wrap>
-      <landingPage v-if="this.currentWindow === 'landingPage'"
-      v-on:startQuestionnaire="selectNewWindow('questionnairMain')"/>
-      <questionnairMain v-on:exit="exit"
-      v-if="this.currentWindow === 'questionnairMain'"/>
+      <landingPage v-if="true"/>
     </v-layout>
   </v-container>
 </template>
 <script>
-import questionnairMain from '@/components/profiles/questionnaire/main.vue'
-import landingPage from '@/components/profiles/firstVisit/landingPage.vue'
+import landingPage from '@/components/home/landingPage.vue'
 export default {
   name: 'firstVisit',
   components: {
-    questionnairMain,
     landingPage
   },
   data () {
