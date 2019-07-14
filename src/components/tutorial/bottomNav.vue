@@ -1,26 +1,26 @@
 <template>
 
-    <v-container grid-list-md fluid text-xs-center>
-        <v-layout row wrap style="background-color: grey;height:50px;">
-          <v-flex xs6  align-center justify-space-between row fill-height>
-
-            <v-btn color="success">Success</v-btn>
-
-
-          </v-flex>
-          <v-flex xs2  align-center justify-center row fill-height>
-            <v-btn color="blue">Next</v-btn>
-          </v-flex>
-        </v-layout>
-      </v-container>
+  <v-layout  row wrap align-center class="elevation-0"
+    style="height:10%;position: absolute;bottom:0;width:100%;">
+    <v-flex xs4 >
+        <v-btn color="info">Back</v-btn>
+    </v-flex>
+    <v-flex xs4>
+        <v-btn color="red">
+          <v-icon>video_library</v-icon>
+        </v-btn>
+    </v-flex>
+    <v-flex xs4>
+        <v-btn color="success">Next</v-btn>
+    </v-flex>
+  </v-layout>
 
 </template>
 <style>
-
-
+</style>
 <script>
 export default {
-  name: 'tutorialNav',
+  name: 'bottomNav',
   components: {
   },
   data () {
