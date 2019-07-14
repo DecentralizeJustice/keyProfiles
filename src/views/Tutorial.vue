@@ -26,7 +26,7 @@ export default {
   computed: {
     currentMain () {
       const name = this.steps[this.currentSection - 1].toLowerCase()
-      return () => import(`@/components/tutorial/${name}.vue`)
+      return () => import(`@/components/tutorial/${name}/${name}.vue`)
     }
   },
   methods: {
