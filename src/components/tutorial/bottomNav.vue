@@ -3,7 +3,7 @@
   <v-layout  row wrap align-center class="elevation-0"
     style="height:10%;position: absolute;bottom:0;width:100%;">
     <v-flex xs4 >
-        <v-btn color="info">Back</v-btn>
+        <v-btn color="info" v-on:click="goBack">Back</v-btn>
     </v-flex>
     <v-flex xs4>
         <v-btn color="red">
@@ -21,6 +21,7 @@
 <script>
 export default {
   name: 'bottomNav',
+  props: ['currentSection', 'steps'],
   components: {
   },
   data () {
@@ -28,6 +29,9 @@ export default {
     }
   },
   methods: {
+    goBack: function () {
+      this.$emit('goBack')
+    }
   }
 }
 </script>
