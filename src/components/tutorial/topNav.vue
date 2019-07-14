@@ -5,7 +5,8 @@
 
     </v-flex>
     <v-flex v-for="(item, index) in steps" :key="item" xs2>
-      <v-btn :color="(index+1 === currentSection ) ? 'primary' : 'secondary'" >
+      <v-btn :color="(index+1 === currentSection ) ? 'primary' : 'secondary'"
+      v-on:click="goTo(index+1)" >
         {{index+1}}. {{item}}
       </v-btn>
     </v-flex>
@@ -22,6 +23,11 @@ export default {
     }
   },
   methods: {
+    goTo: function (aim) {
+      if (this.currentSection !== aim) {
+        this.$emit('goTo', aim)
+      }
+    }
   }
 }
 </script>
