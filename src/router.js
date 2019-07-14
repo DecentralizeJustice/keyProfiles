@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import store from './state/store'
-const myfunction = () => {}
 
 Vue.use(Router)
 
@@ -23,10 +21,6 @@ const router = new Router({
     {
       path: '/tutorial',
       name: 'tutorial',
-      beforeEnter: (to, from, next) => {
-        store.dispatch('tutorialnav/showBar')
-        next()
-      },
       component: () => import('./views/Tutorial.vue')
     },
     {
@@ -41,7 +35,6 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
-  store.dispatch('tutorialnav/hideBar')
   next()
 })
 

@@ -2,13 +2,13 @@
   <div id="app">
     <v-app dark >
     <!-- <navBar app ></navBar> -->
-    <tutorialTopNav v-if="navVisible"/>
+
       <v-content   v-bind:class="{ desk: $vuetify.breakpoint.mdAndUp,
           mobile: $vuetify.breakpoint.smAndDown }"
         >
         <router-view/>
       </v-content>
-      <tutorialNav v-if="navVisible"/>
+
     </v-app>
   </div>
 </template>
@@ -22,17 +22,12 @@
 }
 </style>
 <script>
-import tutorialNav from '@/components/tutorial/bottomNav.vue'
-import tutorialTopNav from '@/components/tutorial/topNav.vue'
-import { createNamespacedHelpers } from 'vuex'
-const { mapState } = createNamespacedHelpers('tutorialnav')
 
 // import navBar from '@/components/nav/mainNavBar.vue'
 export default {
 
   components: {
-    tutorialNav,
-    tutorialTopNav
+
   },
   data () {
     return {
@@ -40,9 +35,6 @@ export default {
     }
   },
   computed: {
-    ...mapState([
-      'navVisible'
-    ])
   }
 }
 </script>
