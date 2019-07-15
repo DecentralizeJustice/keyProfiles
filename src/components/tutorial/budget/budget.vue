@@ -1,9 +1,9 @@
 <template>
   <v-layout align-center row style="height:80%;position: relative;top:0%">
-      <v-flex md8 style="background-color: #0d47a1;height:100%;top:0px;position: relative;">
+      <v-flex md8 style="background-color: #0277bd;height:100%;top:0px;position: relative;">
         <component v-bind:is="currentMain"></component>
       </v-flex>
-      <v-flex md4 style="background-color: #bbdefb;height:100%;" >
+      <v-flex md4 style="background-color: #29b6f6;height:100%;" >
         <v-container  text-xs-center fluid fill-height grid-list-md>
           <v-layout align-center justify-space-around row wrap>
             <v-flex xs12 >

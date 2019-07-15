@@ -13,8 +13,8 @@
           </v-card-title>
 
           <v-card-text class="headline text-xs-left pa-4">
-            Money is no issue for you. This bracket allows you to
-            run your own node and use other pricer crypto storage options.
+            Money is no issue for you. This budget allows you to
+            purchase extra hardware and use other pricer crypto storage options.
           </v-card-text>
         </v-card>
       </v-flex>
