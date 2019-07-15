@@ -7,8 +7,8 @@
     <v-flex xs11>
         <v-layout  justify-space-around row wrap>
           <v-flex v-for="(item, index) in steps" :key="item" xs2>
-            <v-btn :color="(index+1 === currentSection ) ? 'primary' : 'secondary'"
-            v-on:click="goTo(index+1)" >
+            <v-btn :color="(index === currentSection ) ? 'primary' : 'secondary'"
+            v-on:click="goTo(index)" >
               {{index+1}}. {{item}}
             </v-btn>
           </v-flex>

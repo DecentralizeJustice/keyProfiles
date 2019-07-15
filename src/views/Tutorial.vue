@@ -11,6 +11,9 @@
 
 import bottomNav from '@/components/tutorial/bottomNav.vue'
 import topNav from '@/components/tutorial/topNav.vue'
+import { createNamespacedHelpers } from 'vuex'
+
+const { mapState, mapActions } = createNamespacedHelpers('tutorial')
 export default {
   components: {
 
@@ -19,30 +22,35 @@ export default {
   },
   data () {
     return {
-      currentSection: 1,
-      steps: ['Budget', 'Time', 'Resources', 'Needs', 'Source','Suggestions']
+      steps: ['Budget', 'Time', 'Resources', 'Needs', 'Source', 'Suggestions']
     }
   },
   computed: {
     currentMain () {
-      const name = this.steps[this.currentSection - 1].toLowerCase()
+      const name = this.steps[this.currentSection].toLowerCase()
       return () => import(`@/components/tutorial/${name}/${name}.vue`)
-    }
+    },
+    ...mapState({
+      currentSection: 'budget'
+    })
   },
   methods: {
     goBack: function () {
-      if (this.currentSection === 1) {
+      if (this.currentSection === 0) {
         this.$router.go(-1)
       } else {
-        this.currentSection = this.currentSection - 1
+        this.changeSection(this.currentSection - 1)
       }
     },
     goNext: function () {
-      this.currentSection = this.currentSection + 1
+      this.changeSection(this.currentSection + 1)
     },
     goTo: function (goal) {
-      this.currentSection = goal
-    }
+      this.changeSection(goal)
+    },
+    ...mapActions({
+      changeSection: 'changeBudget'
+    })
   }
 }
 </script>

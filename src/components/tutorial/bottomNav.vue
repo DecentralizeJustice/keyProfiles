@@ -11,9 +11,9 @@
         </v-btn>
     </v-flex>
     <v-flex xs4>
-        <v-btn color="success" v-on:click="goNext()" v-if='currentSection !== steps.length'>Next</v-btn>
-        <v-btn color="red" v-if='currentSection === steps.length' v-on:click="goTo(1)">Start Over</v-btn>
-        <v-btn color="pink" v-if='currentSection === steps.length' >Explore More</v-btn>
+        <v-btn color="success" v-on:click="goNext()" v-if='currentSection !== steps.length-1'>Next</v-btn>
+        <v-btn color="red" v-if='currentSection === steps.length-1' v-on:click="goTo(0)">Start Over</v-btn>
+        <v-btn color="pink" v-if='currentSection === steps.length-1' >Explore More</v-btn>
     </v-flex>
   </v-layout>
 
