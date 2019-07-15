@@ -10,7 +10,7 @@
                 <p class="display-2">Select Your Budget</p>
                 <p class="title">(USD)</p>
                 <v-container bg fill-height grid-list-md text-xs-center>
-                  <v-layout row wrap align-center>
+                  <v-layout row wrap align-center justify-center>
                     <v-flex v-for="(item, index) in budgets" :key="`items-${index}`" xs6>
                       <v-btn :color="(index === currentChoice ) ? 'primary' : 'secondary'"
                       class="headline" v-on:click="changeChoice(index)">
@@ -32,7 +32,7 @@ export default {
   },
   data () {
     return {
-      budgets: [ [0], [1, 50], [50, 100], [100, 200], [200, 400], [400] ],
+      budgets: [ [0], [50, 100], [100, 200], [200, 400], [400] ],
       currentChoice: 0
     }
   },
@@ -59,7 +59,7 @@ export default {
   },
   computed: {
     currentMain () {
-      const name = this.budgets[this.currentChoice].toString()
+      const name = this.currentChoice.toString()
       return () => import(`@/components/tutorial/budget/${name}.vue`)
     }
   }

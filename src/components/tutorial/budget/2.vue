@@ -8,13 +8,12 @@
         <v-card>
           <v-card-title text-xs-center primary-title class="elevation-8">
             <v-flex xs12 >
-              <div class="display-1">Software Only</div>
+              <div class="display-1">Hardware and Accessories</div>
             </v-flex>
           </v-card-title>
 
           <v-card-text class="headline text-xs-left pa-4">
-            This budget only allows you to use software wallets that are free on existing
-            hardware that you already have (3. Resources).
+            This budget allows you to buy dedicated hardware and metal storage device.
           </v-card-text>
         </v-card>
       </v-flex>
