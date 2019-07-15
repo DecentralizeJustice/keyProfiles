@@ -20,7 +20,7 @@ export default {
   data () {
     return {
       currentSection: 1,
-      steps: ['Budget', 'Time', 'Resources', 'Needs', 'Suggestions']
+      steps: ['Budget', 'Time', 'Resources', 'Needs', 'Source','Suggestions']
     }
   },
   computed: {

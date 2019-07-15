@@ -37,6 +37,9 @@ export default {
     }
   },
   methods: {
+    startQuestionnaire () {
+      this.$emit('startQuestionnaire')
+    },
     getCorrectString (item) {
       if (item[0] === 0) {
         return '0'
