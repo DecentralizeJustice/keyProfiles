@@ -12,7 +12,7 @@
                 <v-container bg fill-height grid-list-md text-xs-center>
                   <v-layout row wrap align-center justify-center>
                     <v-flex v-for="(item, index) in budgets" :key="`items-${index}`" xs6>
-                      <v-btn :color="(index === currentChoice ) ? 'primary' : 'secondary'"
+                      <v-btn :color="(index === budget ) ? 'primary' : 'secondary'"
                       class="headline" v-on:click="changeChoice(index)">
                         {{getCorrectString (item)}}
                       </v-btn>
@@ -27,13 +27,13 @@
   </v-layout>
 </template>
 <script>
+import { createNamespacedHelpers } from 'vuex'
+
+const { mapState, mapActions } = createNamespacedHelpers('tutorial')
 export default {
-  components: {
-  },
   data () {
     return {
-      budgets: [ [0], [50, 100], [100, 200], [200, 400], [400] ],
-      currentChoice: 0
+      budgets: [ [0], [50, 100], [100, 200], [200, 400], [400] ]
     }
   },
   methods: {
@@ -49,16 +49,22 @@ export default {
       }
     },
     changeChoice (newChoice) {
-      if (newChoice !== this.currentChoice) {
-        this.currentChoice = newChoice
+      if (newChoice !== this.budget) {
+        this.changeBudget(newChoice)
       }
-    }
+    },
+    ...mapActions({
+      changeBudget: 'changeBudget'
+    })
   },
   computed: {
     currentMain () {
-      const name = this.currentChoice.toString()
+      const name = this.budget
       return () => import(`@/components/tutorial/budget/${name}.vue`)
-    }
+    },
+    ...mapState({
+      budget: 'budget'
+    })
   }
 }
 </script>
